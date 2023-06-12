@@ -13,22 +13,42 @@
 </head>
 <body>
     <header>
-            <div class="header">            
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Galeria</a></li>
-                        <li><a href="#">Contato</a></li>            
-                    </ul>   
-            </div>
-        </header>
+        <div class="header">            
+            <nav>    
+                <ul>
+                    <li class="active"><a href="#telaInicio">Início</a></li> <!--ADICIONAR MARCADOR DE TELA ATIVA-->
+                    <li><a href="#telaSobre">Sobre</a></li>
+                    <li><a href="#telaGaleria">Galeria</a></li>
+                    <li><a href="#telaContato">Contato</a></li>            
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
-        <div class="logo">
-            <img src="img/Logo.png">
+        <div id="telaInicio" class="tela">
+            <div class="logo">
+                <img src="img/Logo.png">
+            </div>
+            <div class="titulo">
+                <h1>ALVARO MARQUES - PDR</h1>
+            </div>
         </div>
-        <div class="titulo">
-            <h1>ALVARO MARQUES - PDR</h1>
+
+        <div id="telaSobre" class="tela">
+            <div>
+                <p id="sobre">A Alvaro Marques PDR é uma empresa localizada em Gravataí. Formalizada em 2014, composta por Alvarez e seu filho mais velho, após sua saída da empresa General Motors a entidade faz o serviço de funilaria automotiva, mais conhecido como martelinho de ouro (PDR). Atualmente atendendo as grandes autorizadas como Carburgo, Gravel, Iesa e também as revendas como a Ritter Veiculos, João veículos e a Elite dos carros, localizadas nas cidades de Gravataí e Cachoeirinha, como também estéticas, oficinas e particulares.</p>            
+                <img src="img/fundo.jpeg" class="fundo">
+            </div>
         </div>
+
+        <div id="telaGaleria" class="tela">
+            <h1>galeria de fotos</h1>
+        </div>
+
+        <div id="telaContato" class="tela">
+            <h1>contatos</h1>
+        </div>
+        
 
     </main>
 </body>

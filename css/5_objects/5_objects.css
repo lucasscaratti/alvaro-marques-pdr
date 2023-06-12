@@ -64,3 +64,34 @@
     left: 448px;
     top: 700px;
 }
+
+/* Tela Sobre */
+
+.fundo {
+
+width: 1470px;
+height: 642px;
+left: 73px;
+top: 230px;
+opacity: 0.6;
+border-radius: 98px;
+z-index: -1;
+}
+
+#sobre {
+    position: absolute;
+    width: 758px;
+    height: 599px;
+    left: 711px;
+    top: 875px;
+
+    font-family: 'Judson';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+
+    color: #ffffff;
+    z-index: 1;
+}
