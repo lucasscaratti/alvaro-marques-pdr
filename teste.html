@@ -8,33 +8,62 @@
 
     <style>
         .container {
-        background-image: url('img/fundo.jpeg');
-        background-size: cover;
-        background-position: center;
-        
+        position: relative;
+        width: 800px; /* Largura desejada para o contêiner */
+        height: 400px; /* Altura desejada para o contêiner */
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
         }
 
-        .item-1, .item-2 {
-        flex: 1;
+        .fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Coloca a imagem de fundo atrás dos itens */
+        }
+
+        .container .item-1 .img-sobre{
+            position: relative;
+        z-index: 1; /* Coloca os itens acima da imagem de fundo */
         /* Outros estilos desejados para os itens */
+        width: 200px;
+        height: 200px;
         }
 
-        body {
-            background-image: url('img/fundo.jpeg');
-            background-repeat: no-repeat;
-            background-position: center;
-            
-            height: 100vh;
-            background-color: gray;
-            display: flex;
-            
+        .container .item-2 p {
+            font-size: small;
+            color: white;
         }
+        .container .item-1,
+        .container .item-2 {
+        display: flex;
+        justify-content: center;
+            position: relative;
+        z-index: 1; /* Coloca os itens acima da imagem de fundo */
+        /* Outros estilos desejados para os itens */
+        width: 50%; /* Defina a largura desejada para que os itens fiquem lado a lado */
+        }
+
     </style>
 </head>
 <body>
     
-        <div class="item-1">Item 1</div>
-        <div class="item-2">Item 2</div>
+    <div class="container">
+        <img class="fundo" src="img/fundo.jpeg" alt="Imagem de fundo">
+        <div class="item-1">
+            <img class="img-sobre" src="img/img-sobre.jpg">
+        </div>
+        <div class="item-2">
+            <p>A Alvaro Marques PDR é uma empresa localizada em Gravataí. Formalizada em 2014, composta por Alvarez e seu filho mais velho, após sua saída da empresa General Motors a entidade faz o serviço de funilaria automotiva, mais conhecido como martelinho de ouro (PDR). Atualmente atendendo as grandes autorizadas como Carburgo, Gravel, Iesa e também as revendas como a Ritter Veiculos, João veículos e a Elite dos carros, localizadas nas cidades de Gravataí e Cachoeirinha, como também estéticas, oficinas e particulares.</p>
+        </div>
+      </div>
+        
+    
       
       
 </body>
