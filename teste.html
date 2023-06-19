@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        .container {
+      .container {
         position: relative;
         width: 800px; /* Largura desejada para o contêiner */
         height: 400px; /* Altura desejada para o contêiner */
         display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-        }
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .fundo {
+      .fundo {
         position: absolute;
         top: 0;
         left: 0;
@@ -25,46 +25,96 @@
         height: 100%;
         object-fit: cover;
         z-index: -1; /* Coloca a imagem de fundo atrás dos itens */
-        }
+      }
 
-        .container .item-1 .img-sobre{
-            position: relative;
+      .container .item-1-sobre .img-sobre {
+        position: relative;
         z-index: 1; /* Coloca os itens acima da imagem de fundo */
         /* Outros estilos desejados para os itens */
         width: 200px;
         height: 200px;
-        }
+      }
 
-        .container .item-2 p {
-            font-size: small;
-            color: white;
-        }
-        .container .item-1,
-        .container .item-2 {
+      .container .item-2-sobre p {
+        font-size: small;
+        color: white;
+      }
+      .container .item-1-sobre,
+      .container .item-2-sobre {
         display: flex;
         justify-content: center;
-            position: relative;
+        position: relative;
         z-index: 1; /* Coloca os itens acima da imagem de fundo */
         /* Outros estilos desejados para os itens */
         width: 50%; /* Defina a largura desejada para que os itens fiquem lado a lado */
-        }
+      }
 
+      .lista-imagem {
+        list-style-type: none; /* Remove os marcadores padrão */
+      }
+
+      .lista-imagem li {
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+        padding-left: 20px; /* Espaçamento para a imagem */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        background-position: left center; /* Posiciona a imagem à esquerda do conteúdo do item */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item-1:before {
+        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
+        display: inline-block;
+        width: 100px; /* Largura da imagem */
+        height: 100px; /* Altura da imagem */
+        background-image: url(img/fone.png); /* Caminho para a primeira imagem */
+      }
+
+      .item-2:before {
+        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 109px; /* Largura da imagem */
+        height: 109px; /* Altura da imagem */
+        background-image: url(img/instagram.png); /* Caminho para a segunda imagem */
+      }
+
+      .item-3:before {
+        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 200px; /* Largura da imagem */
+        height: 200px; /* Altura da imagem */
+        background-image: url(img/whatsapp.png); /* Caminho para a terceira imagem */
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="container">
-        <img class="fundo" src="img/fundo.jpeg" alt="Imagem de fundo">
-        <div class="item-1">
-            <img class="img-sobre" src="img/img-sobre.jpg">
-        </div>
-        <div class="item-2">
-            <p>A Alvaro Marques PDR é uma empresa localizada em Gravataí. Formalizada em 2014, composta por Alvarez e seu filho mais velho, após sua saída da empresa General Motors a entidade faz o serviço de funilaria automotiva, mais conhecido como martelinho de ouro (PDR). Atualmente atendendo as grandes autorizadas como Carburgo, Gravel, Iesa e também as revendas como a Ritter Veiculos, João veículos e a Elite dos carros, localizadas nas cidades de Gravataí e Cachoeirinha, como também estéticas, oficinas e particulares.</p>
-        </div>
+      <img class="fundo" src="img/fundo.jpeg" alt="Imagem de fundo" />
+      <div class="item-1-sobre">
+        <img class="img-sobre" src="img/img-sobre.jpg" />
       </div>
-        
-    
-      
-      
-</body>
+      <div class="item-2-sobre">
+        <p>
+          A Alvaro Marques PDR é uma empresa localizada em Gravataí. Formalizada
+          em 2014, composta por Alvarez e seu filho mais velho, após sua saída
+          da empresa General Motors a entidade faz o serviço de funilaria
+          automotiva, mais conhecido como martelinho de ouro (PDR). Atualmente
+          atendendo as grandes autorizadas como Carburgo, Gravel, Iesa e também
+          as revendas como a Ritter Veiculos, João veículos e a Elite dos
+          carros, localizadas nas cidades de Gravataí e Cachoeirinha, como
+          também estéticas, oficinas e particulares.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <ul class="lista-imagem">
+        <li class="item-1">Item 1</li>
+        <li class="item-2">Item 2</li>
+        <li class="item-3">Item 3</li>
+      </ul>
+    </div>
+  </body>
 </html>
