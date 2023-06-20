@@ -45,23 +45,12 @@ header {
   border-bottom: 5px solid #f5f5f5;
 }
 
-/* TELA INICIO */
-
-.logo {
-  height: 50%;
-  width: 50%;
-}
-
-.titulo {
-  margin-top: 10px;
-}
-
-/* TELA SOBRE */
+/* FUNDO */
 
 .container-fundo {
   position: relative;
   width: 1250px; /* Largura desejada para o contêiner */
-  height: 599px; /* Altura desejada para o contêiner */
+  height: 600px; /* Altura desejada para o contêiner */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -92,6 +81,25 @@ header {
   height: 100%;
 }
 
+/* TELA INICIO */
+
+.logo {
+  height: 50%;
+  width: 50%;
+}
+
+.titulo {
+  margin-top: 10px;
+  font-family: "Judson";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* TELA SOBRE */
 .img-sobre {
   display: flex;
   position: relative;
@@ -113,6 +121,47 @@ header {
   height: 100%;
 }
 
+/* TELA GALERIA */
+
+.img-galeria {
+  width: 100%; /* Assegura que as imagens ocupem 100% da largura da div */
+  height: 100%; /* Mantém a proporção de altura original das imagens */
+  max-width: 250px; /* Adicionamos a propriedade max-width */
+  max-height: 250px; /* Adicionamos a propriedade max-height */
+}
+
+.img-1 {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.img-2 {
+  align-self: flex-end;
+}
+.img-3 {
+  justify-self: flex-end;
+}
+
+.item-1-galeria,
+.item-2-galeria {
+  position: relative;
+  z-index: 1;
+  width: 50%; /* Defina a largura desejada para que os itens fiquem lado a lado */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Divide a largura em duas colunas iguais */
+  grid-template-rows: repeat(0.1fr 1fr); /* Divide a altura em duas linhas iguais */
+  gap: 10px; /* Espaçamento entre as imagens */
+  /* justify-items:start;
+  align-items:end; */
+}
+
+.container-fundo .item-1-galeria h2,
+.container-fundo .item-2-galeria h2 {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2; /* A linha de título ocupará duas colunas */
+  text-align: center; /* Centraliza o texto */
+}
+
 /* TELA CONTATOS */
 
 .lista-imagem {
@@ -122,16 +171,15 @@ header {
 }
 
 .lista-imagem li {
-  margin-bottom: 10px; /* Espaçamento entre os itens */
-  padding-left: 20px; /* Espaçamento para a imagem */
+  margin-bottom: 20px; /* Espaçamento entre os itens */
+  /* padding-left: 20px; Espaçamento para a imagem */
   background-repeat: no-repeat; /* Impede a repetição da imagem */
   background-position: left center; /* Posiciona a imagem à esquerda do conteúdo do item */
-  align-items: center;
-
   display: flex; /* Utiliza flexbox para alinhar verticalmente o conteúdo */
-  padding-left: 10px;
-  margin-left: 10px;
-  flex-grow: 1; /* Distribui o espaço disponível igualmente entre os itens */
+  align-items: center;
+  vertical-align: middle;
+  /* padding-left: 10px;
+  margin-left: 10px; */
 }
 
 .item-1-lista:before {
@@ -152,6 +200,8 @@ header {
   height: 109px; /* Altura da imagem */
   background-image: url(/img/instagram.png); /* Caminho para a segunda imagem */
   padding-right: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .item-3-lista:before {

@@ -7,126 +7,34 @@
     <title>Document</title>
 
     <style>
-      .container {
-        position: relative;
-        width: 800px; /* Largura desejada para o contêiner */
-        height: 400px; /* Altura desejada para o contêiner */
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-      }
+ .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  height: 300px;
+}
 
-      .fundo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1; /* Coloca a imagem de fundo atrás dos itens */
-      }
+.container h2 {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
 
-      .container .item-1-sobre .img-sobre {
-        position: relative;
-        z-index: 1; /* Coloca os itens acima da imagem de fundo */
-        /* Outros estilos desejados para os itens */
-        width: 200px;
-        height: 200px;
-      }
-
-      .container .item-2-sobre p {
-        font-size: small;
-        color: white;
-      }
-      .container .item-1-sobre,
-      .container .item-2-sobre {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        z-index: 1; /* Coloca os itens acima da imagem de fundo */
-        /* Outros estilos desejados para os itens */
-        width: 50%; /* Defina a largura desejada para que os itens fiquem lado a lado */
-      }
-
-      .lista-imagem {
-        display: flex; /* Utiliza flexbox para alinhar os itens */
-        flex-direction: column;
-        list-style-type: none; /* Remove os marcadores padrão */
-      }
-
-      .lista-imagem li {
-        padding-left: 20px; /* Espaçamento para a imagem */
-        background-repeat: no-repeat; /* Impede a repetição da imagem */
-        background-position: left center; /* Posiciona a imagem à esquerda do conteúdo do item */
-        display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
-        align-items: center; /* Alinha verticalmente o conteúdo ao centro */
-        flex: 1 1 auto;
-        justify-content: center;
-      }
-
-      .item-1:before {
-        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-        display: inline-block;
-        width: 109px; /* Largura da imagem */
-        height: 109px; /* Altura da imagem */
-        background-image: url(img/whatsapp.png); /* Caminho para a primeira imagem */
-        padding-right: 30px;
-        background-repeat: no-repeat;
-      }
-
-      .item-2:before {
-        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-        display: inline-block;
-        background-repeat: no-repeat;
-        width: 109px; /* Largura da imagem */
-        height: 109px; /* Altura da imagem */
-        background-image: url(img/instagram.png); /* Caminho para a segunda imagem */
-      }
-
-      .item-3:before {
-        content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-        display: inline-block;
-        background-repeat: no-repeat;
-        width: 109px; /* Largura da imagem */
-        height: 109px; /* Altura da imagem */
-        background-image: url(img/fone.png); /* Caminho para a terceira imagem */
-      }
-
-      .container-lista {
-        height: 1000px;
-        width: 1000px;
-        display: flex; /* Utiliza flexbox para alinhar os itens */
-        flex-direction: column;
-      }
+.container img {
+  width: 100%;
+  height: 100%;
+}
     </style>
   </head>
   <body>
+    
     <div class="container">
-      <img class="fundo" src="img/fundo.jpeg" alt="Imagem de fundo" />
-      <div class="item-1-sobre">
-        <img class="img-sobre" src="img/img-sobre.jpg" />
-      </div>
-      <div class="item-2-sobre">
-        <p>
-          A Alvaro Marques PDR é uma empresa localizada em Gravataí. Formalizada
-          em 2014, composta por Alvarez e seu filho mais velho, após sua saída
-          da empresa General Motors a entidade faz o serviço de funilaria
-          automotiva, mais conhecido como martelinho de ouro (PDR). Atualmente
-          atendendo as grandes autorizadas como Carburgo, Gravel, Iesa e também
-          as revendas como a Ritter Veiculos, João veículos e a Elite dos
-          carros, localizadas nas cidades de Gravataí e Cachoeirinha, como
-          também estéticas, oficinas e particulares.
-        </p>
-      </div>
+      <h2>Título</h2>
+      <img src="img/antes-1.png" alt="Imagem 1">
+      <img src="img/depois-1.png" alt="Imagem 2">
+      <img src="img/antes-2.jpeg" alt="Imagem 3">
+      <img src="img/depois-2.jpeg" alt="Imagem 4">
     </div>
-
-    <div class="container-lista">
-      <ul class="lista-imagem">
-        <li class="item-1">Item 1</li>
-        <li class="item-2">Item 2</li>
-        <li class="item-3">Item 3</li>
-      </ul>
-    </div>
+    
   </body>
 </html>
