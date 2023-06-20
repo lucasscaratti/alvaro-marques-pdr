@@ -28,7 +28,13 @@
 }
 
 #telaContato {
-  background-color: #666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
+  z-index: 0;
+  background-color: #131519;
 }
 
 /* FONTES */

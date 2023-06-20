@@ -50,24 +50,29 @@
       }
 
       .lista-imagem {
+        display: flex; /* Utiliza flexbox para alinhar os itens */
+        flex-direction: column;
         list-style-type: none; /* Remove os marcadores padrão */
       }
 
       .lista-imagem li {
-        margin-bottom: 10px; /* Espaçamento entre os itens */
         padding-left: 20px; /* Espaçamento para a imagem */
         background-repeat: no-repeat; /* Impede a repetição da imagem */
         background-position: left center; /* Posiciona a imagem à esquerda do conteúdo do item */
-        align-items: center;
+        display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
+        align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+        flex: 1 1 auto;
         justify-content: center;
       }
 
       .item-1:before {
         content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
         display: inline-block;
-        width: 100px; /* Largura da imagem */
-        height: 100px; /* Altura da imagem */
-        background-image: url(img/fone.png); /* Caminho para a primeira imagem */
+        width: 109px; /* Largura da imagem */
+        height: 109px; /* Altura da imagem */
+        background-image: url(img/whatsapp.png); /* Caminho para a primeira imagem */
+        padding-right: 30px;
+        background-repeat: no-repeat;
       }
 
       .item-2:before {
@@ -83,9 +88,16 @@
         content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
         display: inline-block;
         background-repeat: no-repeat;
-        width: 200px; /* Largura da imagem */
-        height: 200px; /* Altura da imagem */
-        background-image: url(img/whatsapp.png); /* Caminho para a terceira imagem */
+        width: 109px; /* Largura da imagem */
+        height: 109px; /* Altura da imagem */
+        background-image: url(img/fone.png); /* Caminho para a terceira imagem */
+      }
+
+      .container-lista {
+        height: 1000px;
+        width: 1000px;
+        display: flex; /* Utiliza flexbox para alinhar os itens */
+        flex-direction: column;
       }
     </style>
   </head>
@@ -109,7 +121,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="container-lista">
       <ul class="lista-imagem">
         <li class="item-1">Item 1</li>
         <li class="item-2">Item 2</li>
