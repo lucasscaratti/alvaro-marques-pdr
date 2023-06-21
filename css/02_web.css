@@ -49,12 +49,16 @@ header {
 
 .container-fundo {
   position: relative;
-  width: 1250px; /* Largura desejada para o contêiner */
-  height: 600px; /* Altura desejada para o contêiner */
+  /* width: 1470px; */
+  height: 600px;
+  width: 90vw;
+  /* height: 70vh; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
+  /* background-color: red; */
 }
 
 .img-fundo {
@@ -125,9 +129,9 @@ header {
 
 .img-galeria {
   width: 100%; /* Assegura que as imagens ocupem 100% da largura da div */
-  height: 100%; /* Mantém a proporção de altura original das imagens */
-  max-width: 250px; /* Adicionamos a propriedade max-width */
-  max-height: 250px; /* Adicionamos a propriedade max-height */
+  height: auto; /* Mantém a proporção de altura original das imagens */
+  max-width: 100%;
+  /* max-height: 100%; */
 }
 
 .img-1 {
@@ -139,6 +143,14 @@ header {
 }
 .img-3 {
   justify-self: flex-end;
+  grid-column: 2;
+  grid-row: 3;
+  /* height: 100%; */
+  max-height: 100%;
+}
+.img-4 {
+  grid-column: 1;
+  grid-row:3;
 }
 
 .item-1-galeria,
@@ -148,9 +160,9 @@ header {
   width: 50%; /* Defina a largura desejada para que os itens fiquem lado a lado */
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Divide a largura em duas colunas iguais */
-  grid-template-rows: repeat(0.1fr 1fr); /* Divide a altura em duas linhas iguais */
-  gap: 10px; /* Espaçamento entre as imagens */
+  grid-template-columns: 1fr 1fr 0.3fr; /* Divide a largura em duas colunas iguais */
+  grid-template-rows: 0.5fr 1fr 1fr; /* Divide a altura em duas linhas iguais */
+  gap: 10px;
   /* justify-items:start;
   align-items:end; */
 }
@@ -158,7 +170,7 @@ header {
 .container-fundo .item-1-galeria h2,
 .container-fundo .item-2-galeria h2 {
   grid-row: 1 / span 1;
-  grid-column: 1 / span 2; /* A linha de título ocupará duas colunas */
+  grid-column: 1 / span 3; /* A linha de título ocupará duas colunas */
   text-align: center; /* Centraliza o texto */
 }
 
