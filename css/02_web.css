@@ -88,8 +88,9 @@ header {
 /* TELA INICIO */
 
 .logo {
+  width: 790px;
+  max-width: 50%;
   height: 50%;
-  width: 50%;
 }
 
 .titulo {
@@ -109,7 +110,6 @@ header {
   position: relative;
   z-index: 1; /* Coloca os itens acima da imagem de fundo */
   width: 50%;
-  height: 50%;
   align-items: center;
   justify-content: center;
   border: 1px solid #000000;
@@ -123,6 +123,7 @@ header {
   /* position: relative; */
   width: 100%;
   height: 100%;
+  padding: 20px;
 }
 
 /* TELA GALERIA */
@@ -150,7 +151,7 @@ header {
 }
 .img-4 {
   grid-column: 1;
-  grid-row:3;
+  grid-row: 3;
 }
 
 .item-1-galeria,
@@ -178,50 +179,22 @@ header {
 
 .lista-imagem {
   list-style-type: none; /* Remove os marcadores padrão */
-  display: flex; /* Utiliza flexbox para alinhar os itens */
-  flex-direction: column; /* Alinha os itens verticalmente */
 }
 
 .lista-imagem li {
-  margin-bottom: 20px; /* Espaçamento entre os itens */
-  /* padding-left: 20px; Espaçamento para a imagem */
-  background-repeat: no-repeat; /* Impede a repetição da imagem */
-  background-position: left center; /* Posiciona a imagem à esquerda do conteúdo do item */
-  display: flex; /* Utiliza flexbox para alinhar verticalmente o conteúdo */
-  align-items: center;
-  vertical-align: middle;
-  /* padding-left: 10px;
-  margin-left: 10px; */
+  margin-bottom: 30px; /* Espaçamento entre os itens */
+  display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
+  align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+  min-width: 200px;
 }
 
-.item-1-lista:before {
-  content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-  display: inline-block;
-  width: 109px; /* Largura da imagem */
-  height: 109px; /* Altura da imagem */
-  background-image: url(/img/fone.png); /* Caminho para a primeira imagem */
-  padding-right: 30px;
-  background-repeat: no-repeat;
+.lista-imagem li img {
+  width: 7vw;
+  max-width: 109px;
+  height: auto; /* Altura da imagem */
+  margin-right: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
-.item-2-lista:before {
-  content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-  display: inline-block;
-  background-repeat: no-repeat;
-  width: 109px; /* Largura da imagem */
-  height: 109px; /* Altura da imagem */
-  background-image: url(/img/instagram.png); /* Caminho para a segunda imagem */
-  padding-right: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.item-3-lista:before {
-  content: ""; /* Cria um elemento pseudo-antes para exibir a imagem */
-  display: inline-block;
-  background-repeat: no-repeat;
-  width: 109px; /* Largura da imagem */
-  height: 109px; /* Altura da imagem */
-  background-image: url(/img/whatsapp.png); /* Caminho para a terceira imagem */
-  padding-right: 30px;
+#txt-contatos {
+  padding: 20px;
 }

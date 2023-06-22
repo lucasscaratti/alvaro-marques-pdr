@@ -1,0 +1,49 @@
+@media screen and (max-width: 600px) {
+  /* FUNDO */
+  .container-fundo {
+    flex-direction: column !important;
+  }
+
+  .container-fundo .item-1,
+  .container-fundo .item-2 {
+    height: 50% !important;
+  }
+
+  .container-fundo .item-2 {
+    width: 90% !important;
+  }
+
+  /* TELA SOBRE */
+
+  .img-sobre {
+    width: 100% !important;
+  }
+
+  .txt-sobre {
+    padding: 0px !important;
+    /* margin: 10px !important; */
+  }
+
+  /* TELA CONTATO */
+  #telaContato {
+    background-color: red;
+  }
+
+  #txt-contatos {
+    order: 1;
+    padding: 0 !important;
+    width: 80%;
+  }
+  #img-contatos {
+    order: 2;
+  }
+
+  .lista-imagem li {
+    margin-bottom: 20px !important;
+  }
+
+  .lista-imagem li img {
+    width: 15vw !important;
+    max-width: 85px !important;
+  }
+}

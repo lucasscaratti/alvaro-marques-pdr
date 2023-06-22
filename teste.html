@@ -7,23 +7,37 @@
     <title>Document</title>
 
     <style>
-.texto {
-  font-family: "Judson";
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(10px, 20px, 30px);
-  line-height: 2em;
-  text-align: center;
-  color: black;
-}
-</style>
+      .lista-imagem {
+        list-style-type: none; /* Remove os marcadores padrão */
+      }
+
+      .lista-imagem li {
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+        display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
+        align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+      }
+
+      .lista-imagem li img {
+        width: 109px; /* Largura da imagem */
+        height: 109px; /* Altura da imagem */
+        margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+      }
+    </style>
   </head>
   <body>
-    
-    <p class="texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id mi quis nunc ultricies varius. Curabitur porta nisi fringilla facilisis fringilla. Maecenas et dictum elit, ornare bibendum tortor. Etiam consectetur, tellus eget luctus dignissim, nulla metus viverra odio, ac elementum arcu nibh ac elit. Aenean nulla ligula, tincidunt in augue vel, efficitur placerat neque. Duis metus ex, pulvinar ac volutpat id, aliquet et neque. Sed viverra tortor sapien, in finibus tortor pharetra vitae. Nam tristique, elit at pharetra tempus, ante mauris pretium lacus, eu viverra libero purus eu est. Vivamus tortor massa, gravida ac enim et, volutpat tristique felis. Maecenas vitae mattis nisl. Nunc vitae mi at lacus euismod fringilla. Integer vel quam mauris. Quisque euismod varius libero nec dictum. Mauris nibh purus, aliquam quis sapien nec, pellentesque luctus ligula. Duis commodo vitae ex in commodo.
-
-      Donec faucibus lorem vel pharetra tincidunt. Sed ut lectus at ipsum rutrum gravida. Morbi congue tincidunt nisi, quis rutrum quam. Vivamus fermentum semper nulla, eget laoreet lorem suscipit nec. Nulla bibendum justo id bibendum vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras elementum auctor tellus, ac lacinia quam auctor lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras ornare quam sed nibh mattis hendrerit. Suspendisse vulputate, massa ut consectetur euismod, ipsum turpis lobortis nisi, ac vestibulum purus massa ac quam. In id consequat enim. Donec nec sagittis eros, vel fringilla augue.
-      
-      Sed tincidunt ligula et facilisis egestas. Proin lobortis ligula ac est tristique venenatis. Quisque arcu ante, maximus ac semper vel, euismod eget turpis. Suspendisse potenti. Vivamus sit amet mauris vel urna ornare tristique a ut ipsum. Integer mollis nisi nisi. Aliquam nec augue in libero eleifend viverra at eget erat. Donec et ornare sem, vitae placerat ligula. </p>
+    <ul class="lista-imagem">
+      <li>
+        <img src="/img/fone.png" alt="Imagem 1" />
+        Item 1
+      </li>
+      <li>
+        <img src="/img/instagram.png" alt="Imagem 2" />
+        Item 2
+      </li>
+      <li>
+        <img src="/img/whatsapp.png" alt="Imagem 3" />
+        Item 3
+      </li>
+    </ul>
   </body>
 </html>
