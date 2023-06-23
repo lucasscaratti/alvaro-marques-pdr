@@ -7,37 +7,45 @@
     <title>Document</title>
 
     <style>
-      .lista-imagem {
-        list-style-type: none; /* Remove os marcadores padrão */
+      nav {
+        background-color: #f2f2f2;
       }
 
-      .lista-imagem li {
-        margin-bottom: 10px; /* Espaçamento entre os itens */
-        display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
-        align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+      .nav-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
       }
 
-      .lista-imagem li img {
-        width: 109px; /* Largura da imagem */
-        height: 109px; /* Altura da imagem */
-        margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+      .nav-list li {
+        flex: 1;
+        text-align: center;
+      }
+
+      .nav-list li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      /* Estilos para a responsividade */
+      @media screen and (max-width: 600px) {
+        .nav-list {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
   <body>
-    <ul class="lista-imagem">
-      <li>
-        <img src="/img/fone.png" alt="Imagem 1" />
-        Item 1
-      </li>
-      <li>
-        <img src="/img/instagram.png" alt="Imagem 2" />
-        Item 2
-      </li>
-      <li>
-        <img src="/img/whatsapp.png" alt="Imagem 3" />
-        Item 3
-      </li>
-    </ul>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
