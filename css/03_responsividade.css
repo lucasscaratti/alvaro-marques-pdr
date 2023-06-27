@@ -1,9 +1,31 @@
 @media screen and (max-width: 600px) {
   /* HEADER */
-  /* .nav-list {
+  .nav-list  {
+    flex: 1;
+    text-align: center;
     flex-direction: column;
-  } */
-  /* adicionar botao sanduiche, ocultar o menu etc */
+    flex-wrap: wrap;
+    
+  }
+  .nav-list li a {
+    display: block;
+    padding: 15px 15px 10px 10px;
+    text-decoration: none;
+    font-family: "Judson";
+    font-style: normal;
+    font-weight: 15;
+    font-size: 20px;
+    line-height: 15px;
+    color: #f5f5f5;
+    /* border-bottom: 5px solid #870000; */
+    position: relative;
+    inline-size: 10px;
+    flex-wrap: wrap; 
+    
+  }
+  .nav-list li a:hover {
+    border-bottom: 5px solid #f5f5f5;
+  }
   /* FUNDO */
   .container-fundo {
     flex-direction: column !important;
