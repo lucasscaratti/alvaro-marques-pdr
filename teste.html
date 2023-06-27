@@ -7,8 +7,13 @@
     <title>Document</title>
 
     <style>
-      nav {
-        background-color: #f2f2f2;
+      .navbar {
+        background-color: #870000;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 2;
       }
 
       .nav-list {
@@ -16,36 +21,195 @@
         margin: 0;
         padding: 0;
         display: flex;
+        background-color: #870000;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 2;
       }
-
-      .nav-list li {
+      .nav-list {
         flex: 1;
         text-align: center;
       }
-
-      .nav-list li a {
+      .nav-list a {
         display: block;
-        padding: 20px;
+        padding: 20px 20px 30px 20px;
         text-decoration: none;
-        color: #333;
+        font-family: "Judson";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        color: #f5f5f5;
+        /* border-bottom: 5px solid #870000; */
+        position: relative;
+      }
+      body {
+        margin: 0;
+        padding: 0;
       }
 
-      /* Estilos para a responsividade */
-      @media screen and (max-width: 600px) {
-        .nav-list {
-          flex-direction: column;
-        }
+      header {
+        height: 100px;
+        background-color: #f0f0f0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      main {
+        padding-top: 100px; /* Para evitar que o conteúdo fique oculto pela barra de navegação */
+      }
+
+      section {
+        /* margin-top: 100px; */
+        height: calc(
+          100vh - 100px
+        ); /* Ajusta a altura de cada seção para preencher a tela, subtraindo a altura da barra de navegação */
+      }
+      #section1 {
+        background-color: antiquewhite;
+      }
+      #section2 {
+        background-color: azure;
+      }
+      #section3 {
+        background-color: burlywood;
+      }
+      #section4 {
+        background-color: cornsilk;
+      }
+      nav a.active {
+        font-weight: bold; /* Exemplo de estilo para o link ativo */
+        color: rgb(255, 145, 0);
       }
     </style>
+    <script>
+      function scrollToSection(sectionId) {
+        event.preventDefault();
+        var sectionOffset = document.querySelector(sectionId).offsetTop;
+        var headerHeight = document.querySelector("header").offsetHeight;
+        var scrollToPosition = sectionOffset - headerHeight;
+
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: "smooth",
+        });
+      }
+
+      // window.addEventListener("scroll", function () {
+      //   var headerHeight = document.querySelector("header").offsetHeight;
+      //   var sections = document.querySelectorAll("section");
+
+      //   sections.forEach(function (section) {
+      //     var sectionTop = section.offsetTop;
+      //     var sectionHeight = section.offsetHeight;
+      //     var sectionId = section.getAttribute("id");
+      // var navLink = document.querySelector('a[href="#' + sectionId + '"]');
+
+      //     var scrollPosition = window.pageYOffset;
+      //     var sectionInView =
+      //       sectionTop - headerHeight <= scrollPosition &&
+      //       scrollPosition < sectionTop + sectionHeight - headerHeight;
+
+      //     if (sectionInView) {
+      //       navLink.classList.add("active");
+      //     } else {
+      //       navLink.classList.remove("active");
+      //     }
+      //   });
+      // });
+      let sections = document.querySelectorAll("section");
+      let navLinks = document.querySelectorAll("header nav a");
+
+      window.onscroll = () => {
+        sections.forEach((sec) => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 150;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+              links.classList.remove("active");
+              document
+                .querySelector("header nav a[href*=" + id + "]")
+                .classList.add("active");
+            });
+          }
+        });
+      };
+    </script>
   </head>
   <body>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="nav-list">
+        <a
+          class="active"
+          href="#section1"
+          onclick="scrollToSection('#section1', event)"
+          >Seção 1</a
+        >
+        <a href="#section2" onclick="scrollToSection('#section2', event)"
+          >Seção 2</a
+        >
+        <a href="#section3" onclick="scrollToSection('#section3', event)"
+          >Seção 3</a
+        >
+        <a href="#section4" onclick="scrollToSection('#section4', event)"
+          >Seção 4</a
+        >
+      </nav>
+    </header>
+
+    <!-- <header>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li>
+            <a
+              class="active"
+              href="#section1"
+              onclick="scrollToSection('#section1', event)"
+              >Seção 1</a
+            >
+          </li>
+          <li>
+            <a href="#section2" onclick="scrollToSection('#section2', event)"
+              >Seção 2</a
+            >
+          </li>
+          <li>
+            <a href="#section3" onclick="scrollToSection('#section3', event)"
+              >Seção 3</a
+            >
+          </li>
+          <li>
+            <a href="#section4" onclick="scrollToSection('#section4', event)"
+              >Seção 4</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <main>
+      <section id="section1">
+        <!-- Conteúdo da primeira seção -->
+      </section>
+
+      <section id="section2">
+        <!-- Conteúdo da segunda seção -->
+      </section>
+
+      <section id="section3">
+        <!-- Conteúdo da terceira seção -->
+      </section>
+
+      <section id="section4">
+        <!-- Conteúdo da quarta seção -->
+      </section>
+    </main>
   </body>
 </html>

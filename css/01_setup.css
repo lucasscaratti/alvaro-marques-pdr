@@ -1,12 +1,14 @@
 /* SETUP TELAS */
 .tela {
-  height: 100vh; /* Define a altura da tela para ocupar todo o viewport */
+  height: 100vh;
   font-size: 24px;
+  padding-top: 100px;
+  /* min-height: calc(100vh - 100px); */
 }
 
 /* Estilos específicos de cada tela */
 #telaInicio {
-  background-color: #131519;
+  background-color: #a3a3a3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +22,7 @@
   justify-content: center;
   position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
   z-index: 0;
-  background-color: #131519;
+  background-color: #868686;
 }
 
 #telaGaleria {
@@ -30,7 +32,7 @@
   justify-content: center;
   position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
   z-index: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 #telaContato {
@@ -40,7 +42,7 @@
   justify-content: center;
   position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
   z-index: 0;
-  background-color: #131519;
+  background-color: #a3b4d6;
 }
 
 /* FONTES */

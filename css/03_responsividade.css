@@ -1,15 +1,25 @@
 @media screen and (max-width: 600px) {
   /* HEADER */
-  .nav-list  {
-    flex: 1;
+  .nav-list {
+    /* flex: 1;
     text-align: center;
     flex-direction: column;
+    flex-wrap: wrap; */
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    
+    height: 80px;
+  }
+
+  .nav-list li {
+    flex: 1 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .nav-list li a {
     display: block;
-    padding: 15px 15px 10px 10px;
+    padding: initial;
     text-decoration: none;
     font-family: "Judson";
     font-style: normal;
@@ -19,12 +29,8 @@
     color: #f5f5f5;
     /* border-bottom: 5px solid #870000; */
     position: relative;
-    inline-size: 10px;
-    flex-wrap: wrap; 
-    
-  }
-  .nav-list li a:hover {
-    border-bottom: 5px solid #f5f5f5;
+    /* inline-size: 10px; */
+    /* flex-wrap: wrap;  */
   }
   /* FUNDO */
   .container-fundo {
