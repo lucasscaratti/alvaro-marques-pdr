@@ -1,21 +1,29 @@
 /* SETUP TELAS */
-.tela {
-  height: 100vh;
-  font-size: 24px;
+section {
+  height: calc(100vh - 100px);
+}
+
+header {
+  height: 100px;
+}
+
+main {
   padding-top: 100px;
-  /* min-height: calc(100vh - 100px); */
+}
+
+section:nth-child(odd) {
+  background-color: bisque;
 }
 
 /* Estilos específicos de cada tela */
 #telaInicio {
-  background-color: #a3a3a3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#telaSobre {
+.tela {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,26 +31,6 @@
   position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
   z-index: 0;
   background-color: #868686;
-}
-
-#telaGaleria {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
-  z-index: 0;
-  background-color: rgb(255, 255, 255);
-}
-
-#telaContato {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
-  z-index: 0;
-  background-color: #a3b4d6;
 }
 
 /* FONTES */
@@ -58,14 +46,12 @@
   color: #ffffff;
 }
 
-.texto-especifico {
-  font-family: "Italianno", cursive;
-}
 /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,

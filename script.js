@@ -1,3 +1,14 @@
+function scrollToSection(sectionId, event) {
+  event.preventDefault();
+  var sectionOffset = document.querySelector(sectionId).offsetTop;
+  var headerHeight = document.querySelector("header").offsetHeight;
+  var scrollToPosition = sectionOffset - headerHeight;
+
+  window.scrollTo({
+    top: scrollToPosition
+  });
+}
+
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
@@ -18,3 +29,4 @@ window.onscroll = () => {
     }
   });
 };
+
