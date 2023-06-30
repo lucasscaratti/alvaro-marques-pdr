@@ -30,3 +30,17 @@ window.onscroll = () => {
   });
 };
 
+function showMenu() {
+  let menuMobile = document.querySelector('.mobile-menu-icon');
+  let nav = document.querySelector('nav a')
+  if (menuMobile.classList.contains('open')) {
+    menuMobile.classList.remove('open');
+    // nav.classList.remove('open');
+    document.querySelector('.icon').src = "img/menu-icon.svg"
+  } else {
+    menuMobile.classList.add('open');
+    // nav.classList.add('open');
+    document.querySelector('.icon').src = "img/menu-close.svg"
+  }
+}
+

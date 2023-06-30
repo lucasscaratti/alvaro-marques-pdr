@@ -1,77 +1,77 @@
 @media screen and (max-width: 600px) {
   /* HEADER */
-  .nav-list {
-    /* flex: 1;
-    text-align: center;
-    flex-direction: column;
-    flex-wrap: wrap; */
+  main {
+    padding-top: 80px;
+  }
+
+  section {
+    height: calc(100vh - 80px);
+  }
+
+  header {    
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     height: 80px;
-  }
-
-  .nav-list li {
     flex: 1 0 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .nav-list li a {
+
+  nav a {
+    display: none;
+  }
+
+  .mobile-menu-icon {
     display: block;
-    padding: initial;
-    text-decoration: none;
-    font-family: "Judson";
-    font-style: normal;
-    font-weight: 15;
-    font-size: 20px;
-    line-height: 15px;
-    color: #f5f5f5;
-    /* border-bottom: 5px solid #870000; */
-    position: relative;
-    /* inline-size: 10px; */
-    /* flex-wrap: wrap;  */
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .open {
+    display: block;
   }
   /* FUNDO */
   .container-fundo {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   .container-fundo .item-1,
   .container-fundo .item-2 {
-    height: 50% !important;
+    height: 50%;
+    
   }
 
   .container-fundo .item-2 {
-    width: 90% !important;
+    width: 90%;
   }
 
   /* TELA INICIO */
 
-  .logo {
-    padding: 0px 10px 0px 10px;
-  }
   .titulo {
-    font-size: 8vw !important;
-    margin-top: 10px !important;
+    font-size: 8vw;
   }
 
   /* TELA SOBRE */
 
   .img-sobre {
-    width: 100% !important;
+    width: 100%;
   }
 
   .txt-sobre {
-    padding: 0px !important;
+    padding: 0 40px 0 40px;
     /* margin: 10px !important; */
   }
 
   /* TELA CONTATO */
 
   .texto {
-    font-size: 5vw + 1em !important;
-    line-height: 1.2em !important;
+    font-size: 5vw + 1em;
+    line-height: 1.2em;
   }
   .txt-contatos {
     order: 1;
