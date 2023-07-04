@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,73 +10,41 @@
       body {
         margin: 0;
         padding: 0;
-      }
-
-      header {
-        height: 100px;
-        background-color: #f0f0f0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-      .nav-list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        background-color: #870000;
-        height: 100px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 2;
-      }
-      .nav-list {
-        flex: 1;
-        text-align: center;
-      }
-
-      .nav-list a {
-        display: block;
-        padding: 20px 20px 30px 20px;
-        text-decoration: none;
-        font-family: "Judson";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 46px;
-        color: #f5f5f5;
-        /* border-bottom: 5px solid #870000; */
-        position: relative;
-      }
-
-      nav a.active {
-        font-weight: bold; /* Exemplo de estilo para o link ativo */
-        color: rgb(255, 145, 0);
-      }
-
-      main {
-        padding-top: 100px; /* Para evitar que o conteúdo fique oculto pela barra de navegação */
-      }
-
-      section {
-        /* margin-top: 100px; */
-        height: calc(
-          100vh - 100px
-        ); /* Ajusta a altura de cada seção para preencher a tela, subtraindo a altura da barra de navegação */
-      }
-      #section1 {
-        background-color: antiquewhite;
-      }
+        box-sizing: border-box;
+      }       
       #section2 {
-        background-color: azure;
+        display: flex;
+        height: 100vh;
       }
-      #section3 {
-        background-color: burlywood;
+      /* .img-1, .img-5 {
+        background: #b600bd;        
       }
-      #section4 {
-        background-color: cornsilk;
+      .img-2, .img-6 {
+        background: crimson;        
+      }
+      .img-3, .img-7 {
+        background: #00a35f;        
+      }
+      .img-4, .img-8 {
+        background: #e26a07;        
+      } */
+
+      .img-galeria {
+        width: 100%;
+        height: 50%;
+        padding: 5px;
+        
+      }
+
+      .container-galeria-1,
+      .container-galeria-2 {
+        display: flex;
+        width: 50%;
+        align-items: center;
+      }
+
+      .linha-2, .linha-3 {
+        display: block;
       }
     </style>
     <script>
@@ -94,42 +62,37 @@
     </script>
   </head>
   <body>
-    <header>
-      <nav class="nav-list">
-        <a
-          class="active"
-          href="#section1"
-          onclick="scrollToSection('#section1', event)"
-          >Seção 1</a
-        >
-        <a href="#section2" onclick="scrollToSection('#section2', event)"
-          >Seção 2</a
-        >
-        <a href="#section3" onclick="scrollToSection('#section3', event)"
-          >Seção 3</a
-        >
-        <a href="#section4" onclick="scrollToSection('#section4', event)"
-          >Seção 4</a
-        >
-      </nav>
-    </header>
+ 
 
     <main>
-      <section id="section1">
-        <!-- Conteúdo da primeira seção -->
-      </section>
+    
 
       <section id="section2">
-        <!-- Conteúdo da segunda seção -->
-      </section>
+        <div class="container-galeria-1">
+          <!-- <div class="linha-1"><h2>Demonstrativos</h2></div> -->
+          <div class="linha-2">
+            <div class="img-1"><img class="img-galeria" src="/img/demo-1.png"></div>
+            <div class="img-2"><img class="img-galeria" src="/img/demo-2.jpeg"></div>
+          </div>
+          <div class="linha-3">
+            <div class="img-3"><img class="img-galeria" src="/img/demo-3.jpeg"></div>
+            <div class="img-4"><img class="img-galeria" src="/img/demo-4.jpeg"> </div>
+          </div>          
+          
+        </div>
 
-      <section id="section3">
-        <!-- Conteúdo da terceira seção -->
-      </section>
-
-      <section id="section4">
-        <!-- Conteúdo da quarta seção -->
-      </section>
+        <div class="container-galeria-2">
+          <div class="linha-2">
+            <div class="img-5"><img class="img-galeria" src="/img/antes-1.png"></div>
+            <div class="img-6"><img class="img-galeria" src="/img/antes-2.jpeg"></div>
+          </div>
+          <div class="linha-3">
+            <div class="img-7"><img class="img-galeria" src="/img/depois-1.png"></div>
+            <div class="img-8"><img class="img-galeria" src="/img/depois-2.jpeg"></div>
+          </div>
+          
+        </div>
+      
     </main>
     <script src="script.js"></script>
   </body>

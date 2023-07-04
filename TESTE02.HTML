@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .image-container {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 600px) {
+        .image-container {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <h1>Título da Galeria</h1>
+      <div class="image-container">
+        <img src="img/demo-1.png" alt="Imagem 1" />
+        <img src="img/demo-2.jpeg" alt="Imagem 2" />
+      </div>
+      <div class="image-container">
+        <img src="img/demo-3.jpeg" alt="Imagem 3" />
+        <img src="img/demo-4.jpeg" alt="Imagem 4" />
+      </div>
+    </div>
+  </body>
+</html>

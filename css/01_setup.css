@@ -1,5 +1,7 @@
 /* SETUP TELAS */
-
+#telaGaleria {
+  background-color: antiquewhite  ;
+}
 /* Estilos específicos de cada tela */
 #telaInicio {
   display: flex;
