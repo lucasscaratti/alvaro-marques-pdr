@@ -1,5 +1,5 @@
-@media screen and (max-width: 600px) {
-  /* HEADER */
+@media screen and (max-width: 630px) {
+  /* TAMANHO DA TELA */
   main {
     padding-top: 80px;
   }
@@ -8,19 +8,36 @@
     height: calc(100vh - 80px);
   }
 
-  header {    
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  /* HEADER */
+
+  header {
     height: 80px;
-    flex: 1 0 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  nav a {
-    display: none;
+  .nav-bar {
+    height: 80px;
+    padding: 1.5rem;
+    justify-content: space-between;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+    background-color: #870000;
+  }
+  .mobile-menu .nav-item {
+    display: block;
+    padding-top: 1.2rem;
+  }
+
+  .nav-item a:hover,
+  .nav-list a.active {
+    border-bottom: 2px solid #f5f5f5;
+  }
+  .nav-link {
+    padding-bottom: 5px;
+    font-size: 2rem;
   }
 
   .mobile-menu-icon {
@@ -32,8 +49,19 @@
     cursor: pointer;
   }
 
+  .logo {
+    display: flex;
+  }
+  .logo img {
+    height: 50px;
+  }
+
   .open {
     display: block;
+  }
+
+  .nav-item {
+    display: none;
   }
   /* FUNDO */
   .container-fundo {
@@ -43,13 +71,23 @@
   .container-fundo .item-1,
   .container-fundo .item-2 {
     height: 50%;
-    
   }
 
   .container-fundo .item-2 {
     width: 90%;
   }
 
+  /* OVERLAY MENU  */
+  #overlay {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 300px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
   /* TELA INICIO */
 
   .titulo {
@@ -59,12 +97,15 @@
   /* TELA SOBRE */
 
   .img-sobre {
-    width: 100%;
+    width: 90%;
   }
 
   .txt-sobre {
-    padding: 0 40px 0 40px;
-    /* margin: 10px !important; */
+    padding: 0 10px 20px 10px;
+    font-size: clamp(1.2vw + 0.6em, 4vw + 0.4em, 2.5vw) !important;
+    line-height: 1.4 !important;
+    color: white;
+    text-align: center;
   }
 
   /* TELA CONTATO */
@@ -97,8 +138,8 @@
   }
 
   .lista-imagem li img {
-    width: 15vw !important;
-    max-width: 85px !important;
+    width: 18vw !important;
+    max-width: 75px !important;
     margin-right: 10px !important;
   }
 }

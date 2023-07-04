@@ -1,19 +1,4 @@
 /* SETUP TELAS */
-section {
-  height: calc(100vh - 100px);
-}
-
-header {
-  height: 100px;
-}
-
-main {
-  padding-top: 100px;
-}
-
-section:nth-child(odd) {
-  background-color: bisque;
-}
 
 /* Estilos específicos de cada tela */
 #telaInicio {
@@ -30,7 +15,7 @@ section:nth-child(odd) {
   justify-content: center;
   position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
   z-index: 0;
-  background-color: #868686;
+  background-color: #131519;
 }
 
 /* FONTES */
@@ -62,6 +47,7 @@ section:nth-child(odd) {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Judson";
 }
 
 html,
@@ -149,7 +135,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

@@ -3,10 +3,10 @@ function menuShow() {
   let overlay = document.getElementById('overlay');
   if (menuMobile.classList.contains("open")) {
     menuMobile.classList.remove("open");
-    document.querySelector(".icon").src = "assets/img/menu_white_36dp.svg";
+    document.querySelector(".icon").src = "/img/menu-icon.svg";
   } else {
     menuMobile.classList.add("open");
-    document.querySelector(".icon").src = "assets/img/close_white_36dp.svg";
+    document.querySelector(".icon").src = "/img/menu-close.svg";
     overlay.style.display = 'block';
   }
 }
@@ -17,7 +17,7 @@ function closeMenu () {
 
   overlay.style.display = 'none';
   menuMobile.classList.remove("open");
-  document.querySelector(".icon").src = "assets/img/menu_white_36dp.svg";
+  document.querySelector(".icon").src = "/img/menu-icon.svg";
 }
 
 overlay.addEventListener('click', closeMenu);
@@ -31,6 +31,8 @@ function scrollToSection(sectionId, event) {
   window.scrollTo({
     top: scrollToPosition,
   });
+
+  setTimeout(closeMenu, 100);
 }
 
   let sections = document.querySelectorAll("section");
