@@ -50,7 +50,7 @@ header {
 .nav-link {
   text-decoration: none;
   color: #fff;
-  padding-bottom: 22px;
+  padding-bottom: 23px;
 }
 
 .logo {
@@ -142,20 +142,25 @@ header {
 }
 
 .titulos {
-   position: absolute;
-   top:0;
-   height: 50px;
-   width: 100%;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.titulo-mobile {
+  display: none;
 }
 
 .container-galeria-1,
 .container-galeria-2 {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 100%;
+  max-width: 702px;
 }
 
 .linha-1,
@@ -172,16 +177,15 @@ header {
 }
 
 .img-galeria {
-   width: 65%; /* aqui muda o tamanho das imagens */
-   height: 100%; /* só começa a fazer efeito do 50% em diante 
-   /* max-height: 400px; o maximo que funciona é 200 mais ou menos pq a imagem tem esse tamanho*/
-   display: flex;
-   object-fit: cover;
-   margin: 15px; 
-   
+  width: 73%; /* aqui muda o tamanho das imagens */
+  height: 100%; /* só começa a fazer efeito do 50% em diante */
+  max-width: 285px; /* o maximo que funciona é 200 mais ou menos pq a imagem tem esse tamanho */
+  display: flex;
+  object-fit: cover;
+  margin: 15px;
 
-   box-shadow: 0px 0px 2px 8px #860000;
- }
+  box-shadow: 0px 0px 2px 6px #860000;
+}
 /* TELA CONTATOS */
 
 .lista-imagem {
