@@ -19,7 +19,10 @@
     <header>
       <nav class="nav-bar">
         <div class="logo">
-          <img src="/img/Logo.png" onclick="scrollToSection('#telaInicio', event)"/>
+          <img
+            src="/img/Logo.png"
+            onclick="scrollToSection('#telaInicio', event)"
+          />
         </div>
         <div class="nav-list">
           <ul class="titulo">
@@ -133,19 +136,35 @@
       <section id="telaGaleria" class="tela">
         <div class="container-fundo">
           <img class="img-fundo" src="img/fundo.jpeg" alt="Imagem de fundo" />
-          <div class="item-1-galeria">
-            <!-- <h2 class="texto">Antes e Depois</h2> -->
-            <img class="img-galeria img-1" src="/img/antes-1.png">
-            <img class="img-galeria img-2" src="/img/depois-1.png">
-            <img class="img-galeria img-3" src="/img/antes-2.jpeg">
-            <img class="img-galeria img-4" src="/img/depois-2.jpeg">
+          <div class="titulos texto">
+            <h2 id="txt-demo">Demonstrativos</h2>
+            <h2 id="txt-aed">Antes e Depois</h2>
           </div>
-          <div class="item-2-galeria">
-            <!-- <h2 class="texto">Demonstrativos</h2> -->
-            <img class="img-galeria img-1" src="/img/demo-1.png">
-            <img class="img-galeria img-2" src="/img/demo-2.jpeg">
-            <img class="img-galeria img-3" src="/img/demo-3.jpeg">
-            <img class="img-galeria img-4" src="/img/demo-4.jpeg"> 
+
+          <div class="container-galeria-1">
+            <div class="linha-1">
+              <img class="img-galeria coluna-1" src="/img/demo-1.jpg" />
+
+              <img class="img-galeria coluna-1" src="/img/demo-2.jpg" />
+            </div>
+            <div class="linha-2">
+              <img class="img-galeria coluna-2" src="/img/demo-3.jpeg" />
+
+              <img class="img-galeria coluna-2" src="/img/demo-4.jpg" />
+            </div>
+          </div>
+
+          <div class="container-galeria-2">
+            <div class="linha-1">
+              <img class="img-galeria coluna-1" src="/img/antes-1.jpg" />
+
+              <img class="img-galeria coluna-1" src="/img/antes-2.jpg" />
+            </div>
+            <div class="linha-2">
+              <img class="img-galeria coluna-2" src="/img/depois-1.jpg" />
+
+              <img class="img-galeria coluna-2" src="/img/depois-2.jpg" />
+            </div>
           </div>
         </div>
       </section>

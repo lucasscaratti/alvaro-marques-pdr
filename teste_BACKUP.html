@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #section2 {
+        display: flex;
+        height: 100vh;
+      }
+      /* .img-1, .img-5 {
+        background: #b600bd;        
+      }
+      .img-2, .img-6 {
+        background: crimson;        
+      }
+      .img-3, .img-7 {
+        background: #00a35f;        
+      }
+      .img-4, .img-8 {
+        background: #e26a07;        
+      } */
+
+      .img-galeria {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         object-fit: cover;
+         padding: 5px;
+      }
+
+      .container-galeria-1 {
+         display: flex;
+         flex-direction: row;
+         width: 50%;       
+      }
+      .linha-1,
+      .linha-2,
+      .linha-3 {
+         width: 100%;
+         height: 400px;
+         position: relative;
+         display:flex;
+         flex: 100%;  
+         flex-direction: column;
+         padding: 5px;
+      }
+      h2 {
+         display: flex;
+         
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="section2">
+        <h2>Demonstrativos</h2>
+        <div class="container-galeria-1">
+         
+         <div class="linha-1">
+            <img class="img-galeria" src="/img/demo-1.jpg" />
+
+            <img class="img-galeria" src="/img/demo-2.jpg" />
+          </div>
+          <div class="linha-2">
+            <img class="img-galeria" src="/img/demo-3.jpeg" />
+
+            <img class="img-galeria" src="/img/demo-4.jpg" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

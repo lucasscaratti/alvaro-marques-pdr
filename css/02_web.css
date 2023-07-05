@@ -133,49 +133,55 @@ header {
 
 /* TELA GALERIA */
 
+.coluna-1 {
+  align-self: flex-end;
+}
+
+.coluna-2 {
+  align-self: flex-start;
+}
+
+.titulos {
+   position: absolute;
+   top:0;
+   height: 50px;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.container-galeria-1,
+.container-galeria-2 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.linha-1,
+.linha-2 {
+  /* width: 400px;
+  height: 10%; */
+  /* position: relative; */
+  display: flex;
+  /* flex: 100%; */
+  flex-direction: column;
+  /* padding: 5px; */
+  justify-content: center;
+  align-items: center;
+}
+
 .img-galeria {
-  width: 50%; /* Assegura que as imagens ocupem 100% da largura da div */
-}
+   width: 65%; /* aqui muda o tamanho das imagens */
+   height: 100%; /* só começa a fazer efeito do 50% em diante 
+   /* max-height: 400px; o maximo que funciona é 200 mais ou menos pq a imagem tem esse tamanho*/
+   display: flex;
+   object-fit: cover;
+   margin: 15px; 
+   
 
-
-.item-1-galeria,
-.item-2-galeria {
-  position: relative;
-  z-index: 1;
-  width: 100%; /* Defina a largura desejada para que os itens fiquem lado a lado */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Divide a largura em duas colunas iguais */ 
-  gap: 10px;
-}
-
-.container-fundo .item-1-galeria h2,
-.container-fundo .item-2-galeria h2 {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 3; /* A linha de título ocupará duas colunas */
-  text-align: center; /* Centraliza o texto */
-  font-size: 40px;
-}
-
-/* .img-1 {
-  align-self: flex-end;
-  justify-self: flex-end;
-  max-width: 358px;
-  max-height: 300px;
-}
-.img-2 {
-  align-self: flex-end;
-}
-.img-3 {
-  justify-self: flex-end;
-  grid-column: 2;
-  grid-row: 3;
-  height: 100%;
-  max-height: 100%;
-}
-.img-4 {
-  grid-column: 1;
-  grid-row: 3;
-} */
+   box-shadow: 0px 0px 2px 8px #860000;
+ }
 /* TELA CONTATOS */
 
 .lista-imagem {
