@@ -114,14 +114,16 @@
     height: 1800px;
   }
 
-  .titulos {
+  .titulos-1 {
     display: flex;
     position: relative;
     height: 20px;
     font-size: 5vw;
     padding: 15px;
     align-items: center;
+    margin-top: initial;
   }
+
   .titulo-mobile {
     display: flex;
   }
@@ -138,6 +140,7 @@
     flex-direction: row;
     width: 90%;
     max-width: 330px;
+    padding-top: initial;
   }
 
   .linha-1,
@@ -151,6 +154,12 @@
     /* padding: 5px; */
     justify-content: center;
     align-items: center;
+  }
+
+  .linha-1 a img,
+  .linha-2 a img {
+    width: 72%;
+    height: auto;
   }
 
   .img-galeria {

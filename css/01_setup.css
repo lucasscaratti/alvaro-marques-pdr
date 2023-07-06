@@ -12,7 +12,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa dessa posicao*/
+  position: relative; /* Pra fazer o background-color funcionar alem do z-index precisa desse position*/
   z-index: 0;
   background-color: #131519;
 }

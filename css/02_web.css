@@ -133,22 +133,27 @@ header {
 
 /* TELA GALERIA */
 
-.coluna-1 {
-  align-self: flex-end;
-}
-
-.coluna-2 {
-  align-self: flex-start;
-}
-
-.titulos {
+.titulos-1 {
   position: absolute;
   top: 0;
-  height: 40px;
-  width: 100%;
+  left: 0;
+  height: 30px;
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-end;
+  margin-top: 10px;
+}
+.titulos-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 10px;
 }
 
 .titulo-mobile {
@@ -161,6 +166,7 @@ header {
   flex-direction: row;
   width: 100%;
   max-width: 702px;
+  padding-top: 20px;
 }
 
 .linha-1,
@@ -177,7 +183,7 @@ header {
 }
 
 .img-galeria {
-  width: 73%; /* aqui muda o tamanho das imagens */
+  width: 70%; /* aqui muda o tamanho das imagens */
   height: 100%; /* só começa a fazer efeito do 50% em diante */
   max-width: 285px; /* o maximo que funciona é 200 mais ou menos pq a imagem tem esse tamanho */
   display: flex;
@@ -185,6 +191,25 @@ header {
   margin: 15px;
 
   box-shadow: 0px 0px 2px 6px #860000;
+}
+
+.img-galeria:hover {
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.linha-1 a,
+.linha-2 a {
+  display: flex;
+}
+.linha-1 a {
+  justify-content: flex-end;
+}
+
+.linha-1 a img,
+.linha-2 a img {
+  width: 79%;
+  height: auto;
 }
 /* TELA CONTATOS */
 
