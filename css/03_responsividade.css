@@ -79,6 +79,7 @@
 
   /* OVERLAY MENU  */
   #overlay {
+    /* Overlay para fechar o nav-menu tocando em qualquer area da tela */
     display: none;
     position: fixed;
     bottom: 0;
@@ -127,9 +128,6 @@
   .titulo-mobile {
     display: flex;
   }
-  #txt-aed {
-    display: flex;
-  }
   .titulo-web {
     display: none;
   }
@@ -145,13 +143,8 @@
 
   .linha-1,
   .linha-2 {
-    /* width: 400px;
-  height: 10%; */
-    /* position: relative; */
     display: flex;
-    /* flex: 100%; */
     flex-direction: column;
-    /* padding: 5px; */
     justify-content: center;
     align-items: center;
   }
@@ -181,7 +174,6 @@
   .txt-contatos {
     order: 1;
     padding: 0 !important;
-    /* width: 80%; */
     font-size: 5vw !important;
   }
   #img-contatos {

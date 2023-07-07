@@ -171,21 +171,16 @@ header {
 
 .linha-1,
 .linha-2 {
-  /* width: 400px;
-  height: 10%; */
-  /* position: relative; */
   display: flex;
-  /* flex: 100%; */
   flex-direction: column;
-  /* padding: 5px; */
   justify-content: center;
   align-items: center;
 }
 
 .img-galeria {
   width: 70%; /* aqui muda o tamanho das imagens */
-  height: 100%; /* só começa a fazer efeito do 50% em diante */
-  max-width: 285px; /* o maximo que funciona é 200 mais ou menos pq a imagem tem esse tamanho */
+  height: 100%;
+  max-width: 285px;
   display: flex;
   object-fit: cover;
   margin: 15px;
@@ -208,22 +203,22 @@ header {
 
 .linha-1 a img,
 .linha-2 a img {
-  width: 79%;
+  width: 79%; /* Ajusta o tamanho das imagens da galeria */
   height: auto;
 }
 /* TELA CONTATOS */
 
 .lista-imagem {
-  position: absolute; /* Define o posicionamento absoluto para a lista */
-  top: 50%; /* Define a posição vertical no meio do contêiner */
-  left: 50%; /* Define a posição horizontal no meio do contêiner */
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%); /* Centraliza a lista usando translate */
-  list-style-type: none; /* Remove os marcadores padrão */
+  list-style-type: none;
 }
 
 .lista-imagem li {
-  display: flex; /* Utiliza flexbox para alinhar o conteúdo do item */
-  align-items: center; /* Alinha verticalmente o conteúdo ao centro */
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   padding-top: 25px;
   padding-bottom: 25px; /* Espaçamento entre os itens */

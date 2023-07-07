@@ -1,4 +1,5 @@
 function menuShow() {
+  /* Abre e fecha o nav-menu mobile */
   let menuMobile = document.querySelector(".mobile-menu");
   let overlay = document.getElementById("overlay");
   if (menuMobile.classList.contains("open")) {
@@ -12,6 +13,7 @@ function menuShow() {
 }
 
 function closeMenu() {
+  /* Fecha o nav-menu mobile quando toca em uma parte do Overlay */
   let overlay = document.getElementById("overlay");
   let menuMobile = document.querySelector(".mobile-menu");
 
@@ -23,6 +25,7 @@ function closeMenu() {
 overlay.addEventListener("click", closeMenu);
 
 function scrollToSection(sectionId, event) {
+  /* Configura o click no nav-menu pra cair certinho na altura da seção */
   event.preventDefault();
   var sectionOffset = document.querySelector(sectionId).offsetTop;
   var headerHeight = document.querySelector("header").offsetHeight;
@@ -37,6 +40,8 @@ function scrollToSection(sectionId, event) {
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
+
+/* Configura o nav-menu pra sempre mostrar a seção ativa no momento */
 
 window.onscroll = () => {
   sections.forEach((sec) => {
